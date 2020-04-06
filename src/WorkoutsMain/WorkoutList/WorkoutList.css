@@ -1,0 +1,27 @@
+.WorkoutList .container {
+    display: grid;
+    row-gap: 10px;
+    margin: 0 20px;
+}
+
+
+.WorkoutList .WorkoutListTitle {
+    text-align: left;
+    margin: 30px 20px;
+}
+
+.WorkoutList .container-content {
+    /* border: 2px solid; */
+    background-color: grey;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    .WorkoutList .container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+    }
+}

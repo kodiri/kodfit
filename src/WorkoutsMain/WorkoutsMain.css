@@ -1,0 +1,22 @@
+.WorkoutsMain .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 70px 20px;
+    gap: 30px;
+}
+
+
+.WorkoutsMain .container-content {
+    /* border: 2px solid; */
+    background-color: grey;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 600px) {
+    .WorkoutsMain .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
