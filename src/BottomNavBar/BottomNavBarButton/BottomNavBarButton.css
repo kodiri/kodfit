@@ -2,14 +2,23 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  height: 8vh;
+  height: 9vh;
   align-items: center;
   justify-content: center;
   color: #333;
   background-color: #eee;
+  font-size: 0.8em;
 }
 
 .BottomNavBarButton.active {
-  background-color: crimson;
-  color: white;
+  color: crimson;
+}
+
+.BottomNavBarButton .icon svg {
+  fill: #333;
+  font-size: 1.6em;
+}
+
+.BottomNavBarButton.active .icon svg {
+  fill: crimson;
 }
