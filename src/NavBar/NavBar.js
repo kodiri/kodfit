@@ -1,11 +1,11 @@
 import React from 'react'
-import NavBarButton from './BottomNavBarButton/BottomNavBarButton'
-import './BottomNavBar.css'
+import NavBarButton from './NavBarButton/NavBarButton'
+import './NavBar.css'
 import {FaDumbbell, FaCalendarAlt} from 'react-icons/fa'
 import {MdInsertChart, MdAccountCircle, MdLocationOn} from 'react-icons/md'
 
 
-export default function BottomNavBar() {
+export default function NavBar() {
   const navLinks = [
     {name: 'schedule', path: 'calendar', icon: <FaCalendarAlt />},
     {name: 'nearby', path: 'near-me', icon: <MdLocationOn />},
@@ -15,7 +15,7 @@ export default function BottomNavBar() {
   ]
 
   return (
-    <div className="BottomNavBar">
+    <div className="NavBar">
       {
         navLinks.map(navLink => (
           <NavBarButton 

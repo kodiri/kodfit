@@ -1,4 +1,4 @@
-.BottomNavBarButton {
+.NavBarButton {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -10,15 +10,15 @@
   font-size: 0.8em;
 }
 
-.BottomNavBarButton.active {
+.NavBarButton.active {
   color: crimson;
 }
 
-.BottomNavBarButton .icon svg {
+.NavBarButton .icon svg {
   fill: #333;
   font-size: 1.6em;
 }
 
-.BottomNavBarButton.active .icon svg {
+.NavBarButton.active .icon svg {
   fill: crimson;
 }

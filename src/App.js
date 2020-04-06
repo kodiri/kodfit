@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import BottomNavBar from './BottomNavBar/BottomNavBar';
+import NavBar from './NavBar/NavBar';
 import './App.css';
 import CalendarApp from './CalendarApp/CalendarApp';
 import NearMeGyms from './NearMe/NearMeGyms/NearMeGyms';
@@ -27,7 +27,7 @@ function App() {
 				<Route path="/tracker" exact component={Tracker} />
 				<Route path="/login" exact component={Login} />
         <Route path="/timer" exact component={Timer} />
-				<BottomNavBar />
+				<NavBar />
 			</div>
 		</Router>
 	);
