@@ -1,0 +1,33 @@
+.Tracker {
+    margin: 80px 20px;
+}
+
+.Tracker .container {
+    display: grid;
+}
+
+.Tracker .graph {
+    background-color: grey;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tracker .information {
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media (min-width: 600px) {
+    .Tracker .container {
+        grid-template-columns: 60% 1fr;
+    }
+
+    .Tracker .information {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
