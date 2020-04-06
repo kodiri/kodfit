@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './WorkoutsMain.css';
 
 export default function WorkoutsMain() {

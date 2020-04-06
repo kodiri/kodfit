@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './NearMeTrainers.css';
 
 export default function NearMeTrainers() {

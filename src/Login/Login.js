@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
 import './Login.css';
 import InputBox from './InputBox/InputBox';
 
 export default function Login() {
     return (
         <div className="Login">
+            <div className="logo">
+                Logo
+            </div>
             <main className="container">
                 <div className="inputBox">
                     <InputBox type="text" placeholder="Username" />
