@@ -9,7 +9,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    z-index: 0;
 }
 
 .HeroBanner .hero-overlay h1 {
@@ -24,7 +23,7 @@
 .HeroBanner .hero-image {
     display: block;
     z-index: -1;
-    filter: brightness(80%);
+
 }
 
 .HeroBanner .btn {

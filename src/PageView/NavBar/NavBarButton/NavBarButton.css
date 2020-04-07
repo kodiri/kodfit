@@ -1,0 +1,24 @@
+.NavBarButton {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 9vh;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  background-color: #eee;
+  font-size: 0.8em;
+}
+
+.NavBarButton.active {
+  color: crimson;
+}
+
+.NavBarButton .icon svg {
+  fill: #333;
+  font-size: 1.6em;
+}
+
+.NavBarButton.active .icon svg {
+  fill: crimson;
+}

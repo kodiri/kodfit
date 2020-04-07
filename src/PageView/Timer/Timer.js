@@ -36,44 +36,37 @@ class Timer extends React.Component {
         const timeObject = {};
         timeObject[timeUnit] = e.target.value * modifier
         this.setState(timeObject)
-     }
-     
+     }   
+
     componentDidMount() {
         let timeLeftVar = this.secondsToTime(this.state.seconds);
         this.setState({ time: timeLeftVar });
     }
 
     startTimer = (secs) => {
-
         if (this.state.isRunning && this.state.seconds > 0) {
             this.setState({
                 isRunning: false
             });
             clearInterval(this.timer);
-
         } else {
             let total = +this.state.inputMinutes + +this.state.inputSeconds;
-
             this.setState({
                 seconds: total,
                 isRunning: true
             });
 
             this.timer = setInterval(this.countDown, 1000);
-
         }
-
     }
 
     countDown = (secs) => {
-
         let seconds = this.state.seconds - 1;
         this.setState({
             time: this.secondsToTime(seconds),
             seconds: seconds,
         });
-
-        if (seconds == 0) {
+        if (seconds === 0) {
             clearInterval(this.timer);
         }
     }
