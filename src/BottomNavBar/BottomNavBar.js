@@ -1,6 +1,6 @@
-import React from 'react'
-import NavBarButton from './BottomNavBarButton/BottomNavBarButton'
-import './BottomNavBar.css'
+import React from 'react';
+import NavBarButton from './BottomNavBarButton/BottomNavBarButton';
+import './BottomNavBar.css';
 
 
 export default function BottomNavBar() {

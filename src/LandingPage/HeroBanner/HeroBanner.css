@@ -1,0 +1,46 @@
+.HeroBanner {
+    position: relative;
+}
+
+.HeroBanner .hero-overlay {
+    left: 50%;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 0;
+}
+
+.HeroBanner .hero-overlay h1 {
+    color: #fff;
+    font-size: 9vw;
+}
+
+.HeroBanner img {
+    object-fit: cover;
+}
+
+.HeroBanner .hero-image {
+    display: block;
+    z-index: -1;
+    filter: brightness(80%);
+}
+
+.HeroBanner .btn {
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.45;
+    padding: 0.9rem 2.75rem;
+    text-transform: uppercase;
+}
+
+.HeroBanner .btn-transparent {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.HeroBanner .rounded-capsule {
+    border-radius: 3rem;
+}

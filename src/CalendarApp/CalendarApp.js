@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
+import WorkoutExerciseList from '../WorkoutsMain/WorkoutExerciseList/WorkoutExerciseList.js';
 import './CalendarApp.css';
- 
+
 
 export default function CalendarApp() {
   const [date, setDate] = useState(new Date());
@@ -15,8 +16,8 @@ export default function CalendarApp() {
     <div className="calendarAppContainer">
         <h2 className="calendarTitle">Activity Calendar</h2>
       
-      <div className="containerOne">
-        <main className="containerContent">
+      <div className="calendarOne">
+        <main className="calendarContent">
           <Calendar
             minDate={new Date(2020, 0, 1)}
             maxDate={new Date(2020, 11, 31)}
@@ -31,6 +32,8 @@ export default function CalendarApp() {
           />
         </main>
       </div>
+      <WorkoutExerciseList />
+      
     </div>
   );
 
