@@ -1,7 +1,9 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './NavBar/NavBar';
 import './App.css';
+import './Utility.css';
+import './Base.css';
 import CalendarApp from './CalendarApp/CalendarApp';
 import NearMeGyms from './NearMe/NearMeGyms/NearMeGyms';
 import NearMeTrainers from './NearMe/NearMeTrainers/NearMeTrainers';
@@ -11,7 +13,8 @@ import WorkoutCurrent from './WorkoutsMain/WorkoutCurrent/WorkoutCurrent';
 import NearMe from './NearMe/NearMe';
 import Tracker from './Tracker/Tracker';
 import Login from './Login/Login';
-import Timer from './Timer/Timer'
+import Timer from './Timer/Timer';
+
 function App() {
 	return (
 		<Router>
@@ -26,7 +29,7 @@ function App() {
 				<Route path="/workout-current" exact component={WorkoutCurrent} />
 				<Route path="/tracker" exact component={Tracker} />
 				<Route path="/login" exact component={Login} />
-        <Route path="/timer" exact component={Timer} />
+				<Route path="/timer" exact component={Timer} />
 				<NavBar />
 			</div>
 		</Router>
