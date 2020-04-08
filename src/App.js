@@ -5,14 +5,15 @@ import './Utility.css';
 import './Base.css';
 import PageView from './PageView/PageView';
 import LandingPage from './LandingPage/LandingPage';
-import logo from './common/images/kodfit_logo_small.svg';
+import Logo from './Logo/Logo';
+
 
 
 function App() {
 	return (
 		<Router>
 			<div className="App">
-				<img src={logo} className="logo" />
+				<Logo />
 				<PageView />
 				<Route path="/" exact component={LandingPage} />
 			</div>
