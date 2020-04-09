@@ -5,8 +5,13 @@ export default function InfoWindows({place}) {
   return (
     <InfoWindow position={place.position}>
       <>
-      <h4>{place.title}</h4>
-      {place.openingHours ? place.openingHours[0].text.map(hour => <p key={place.id+place.title}>{hour}</p>) : ''}
+        <h4>{place.title}</h4>
+        {
+          place.openingHours ? 
+            place.openingHours[0]
+              .text.map((hour,index)=> <p key={`${place.id}+${index}`}>{hour}</p>) :
+            place.address.label
+        }
       </>
     </InfoWindow>
   )
