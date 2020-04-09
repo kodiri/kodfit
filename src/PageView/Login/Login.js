@@ -7,7 +7,7 @@ export default function Login() {
     return (
         <div className="Login">
             <div className="logoBox">
-                <img src={kodfit_logo} className="logo" />
+                <img src={kodfit_logo} className="logo" alt="logo" />
             </div>
             <main className="container">
                 <div className="inputBox">

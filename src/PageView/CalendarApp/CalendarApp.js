@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
-import WorkoutExerciseList from '../WorkoutsMain/WorkoutExerciseList/WorkoutExerciseList.js';
+import ExercisesData from '../../Data/ExercisesData';
+import ExerciseList from '../WorkoutsMain/WorkoutExerciseList/WorkoutExerciseList';
 import './CalendarApp.css';
+
 
 
 export default function CalendarApp() {
@@ -32,10 +34,30 @@ export default function CalendarApp() {
           />
         </main>
       </div>
-      <WorkoutExerciseList />
+  
       
-    </div>
-  );
+        <div className="calendarWorkoutContainer">
+          <div className="ContainerContent">
+            <h3 className="title">Daily Workout</h3>
+            <button className="button">Start</button>
+
+            <div className="calendarExerciseList"> {
+              
+              ExercisesData().map(exercise => {
+                return (
+                  <ExerciseList
+                  key={exercise.exerciseName}
+                  exerciseName={exercise.exerciseName}
+                  reps={exercise.reps}
+                  />
+                );
+              })
+            }
+            </div>
+          </div>
+        </div> 
+      </div>  
+  );  
 
 }
 
