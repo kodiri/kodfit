@@ -13,18 +13,21 @@ export default function LandingPage() {
                 image={heroImage}
                 imageAlt="placeholder text"
                 buttonLabel="Register Now"
+                buttonLink="/login"
             />
             <HeroBanner 
                 title="About Us" 
                 image={about} 
                 imageAlt="placeholder text"
                 buttonLabel="Read More"
+                buttonLink="/about"
             />
             <HeroBanner 
                 title="Our Goal" 
                 image={ourGoal} 
                 imageAlt="placeholder text"
                 buttonLabel="Read More"
+                buttonLink="/our-goal"
             />
         </main>
     );
