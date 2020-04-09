@@ -5,7 +5,6 @@ import {
   Marker,
 } from '@react-google-maps/api';
 import './NearMeGyms.css';
-import { getHKey, getGKey } from './hashKeys';
 import InfoWindows from './InfoWindows/InfoWindows'
 
 export default function NearMeGyms() {
