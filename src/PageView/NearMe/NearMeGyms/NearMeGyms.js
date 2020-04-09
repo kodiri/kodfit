@@ -10,10 +10,10 @@ import InfoWindows from './InfoWindows/InfoWindows'
 
 export default function NearMeGyms() {
   const [data, setData] = useState([]);
-  const [location, setLocation] = useState({});
+  const [location, setLocation] = useState({ lat: 51.5007, lng: -0.1246 });
   const [markerIsClicked, setMarkerIsClicked] = useState(false)
   useEffect(() => {
-    function successPosition(position) {
+    let successPosition = (position) => {
       setLocation({
         lat: position.coords.latitude,
         lng: position.coords.longitude,
@@ -32,8 +32,6 @@ export default function NearMeGyms() {
       setData(result.items);
     })();
   }, [location]);
-
-  useEffect(() => console.log(data), [data])
 
   return (
     <div className="NearMeGyms">
