@@ -1,40 +1,49 @@
 import React, { useState, useEffect } from 'react';
-import { GoogleMap, LoadScript, MarkerClusterer, Marker } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import './NearMeGyms.css';
 
 export default function NearMeGyms() {
 
-  let [location, setLocation] = useState({lat: 51.5007, lng: -0.1246});
-  let [results, setResults] = useState([])
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(({coords}) => {
-      setLocation({
-        lat: coords.latitude,
-        lng: coords.longitude
-      })
-    });
-/*       const response = await fetch(`https://maps.googleapis.coma/maps/api/place/nearbysearch/json?location=${location.lat},${location.lng}&radius=1500&type=gym&key=AIzaSyDJafHKT_k97cPZ826in74GF-yIV_ww7Hk`);
-      const results = await response.json();
-      setResults([results]); */
-  }, [location])
+    const [data, setData] = useState([]);
+    const [location, setLocation] = useState({});  
+    useEffect(
+       () => {
+        function successPosition(position) {
+          setLocation({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          })
+        };
+        let errorHandle = () => setLocation({lat: 51.5007, lng: -0.1246});
+        navigator.geolocation.getCurrentPosition(successPosition, errorHandle);
+      }, [])
 
+    useEffect(
+      () => { 
+        (async () => {
+          const response = await fetch(`https://discover.search.hereapi.com/v1/discover?at=${location.lat},${location.lng}&q=gym&limit=15&apiKey=bYn1_nn2_CYDA29oVvcibuL4otpQL3F0HIF5aBnlcW4`);
+          const result = await response.json(); 
+          setData(result.items)
+        })()
+      }, [location])
+  
   return (
     <div className="NearMeGyms">
       <div className="containerOne">
         <div className="map containerOne-content">
           <LoadScript 
             id='load-script'
-            googleMapsApiKey=""
+            googleMapsApiKey='AIzaSyAHs3RiKCGgJhll5xXKjLFqprAi6-LW3Rc'
           >
             <GoogleMap 
-              id='map'
+              id='gmap'
               zoom={13}
               center={location}
               mapContainerClassName='map'
             >
-              <MarkerClusterer >
-                <Marker />
-              </MarkerClusterer>
+              {
+                data && data.map(place => <Marker position={place.position} key={place.id}/>)
+              }
             </GoogleMap>
           </LoadScript>
         </div>
