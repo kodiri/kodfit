@@ -11,7 +11,7 @@ import InfoWindows from './InfoWindows/InfoWindows'
 export default function NearMeGyms() {
   const [data, setData] = useState([]);
   const [location, setLocation] = useState({ lat: 51.5007, lng: -0.1246 });
-  const [markerIsClicked, setMarkerIsClicked] = useState(false)
+  const [markerId, setMarkerId] = useState('')
   useEffect(() => {
     let successPosition = (position) => {
       setLocation({
@@ -49,9 +49,9 @@ export default function NearMeGyms() {
                   <Marker
                     key={place.id}
                     position={place.position}
-                    onClick={() => setMarkerIsClicked(place.id)}>
+                    onClick={() => setMarkerId(place.id)}>
                       {
-                        markerIsClicked === place.id ? <InfoWindows place={place} /> : ''
+                        markerId === place.id ? <InfoWindows place={place} /> : ''
                       }                                         
                     </Marker>
                 ))}
