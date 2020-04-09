@@ -9,7 +9,7 @@ export default function LandingPage() {
     return (
         <main className="LandingPage">
             <HeroBanner 
-                title="Train & Feel Better Together" 
+                title="Train & Feel Better Together :)" 
                 image={heroImage}
                 imageAlt="placeholder text"
                 buttonLabel="Register Now"
