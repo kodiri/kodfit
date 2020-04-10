@@ -16,7 +16,20 @@
     height: 300px;
     width: 100%;
 }
+.NearMeGyms .switch-buttons {
+    display: flex;
+    flex-direction: column;
+}
 
+.NearMeGyms .switch-buttons label{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.NearMeGyms .switch-toggle {
+    height: 15px;
+}
 @media (min-width: 600px) {
     .NearMeGyms .containerOne {
         grid-template-columns: 2fr 1fr;
