@@ -10,7 +10,7 @@
     grid-gap: 10px 6px;
 }
 
-.Timer .digit-timer {
+.Timer .display-timer {
     grid-column: 1 / 4;
     justify-self: center;
     font-size: 120px;
@@ -58,4 +58,45 @@
     font-size: 42px;
     padding-top: 12px;
     padding-left: 8px;
+}
+
+.Timer .titles {
+    font-size: 42px;
+    grid-column: 1 / 4;
+    justify-self: center;
+}
+
+.Timer .titles span {
+    margin:10px;
+}
+
+.Timer .active {
+    background: crimson;
+    border-radius: 34px;
+    height: 334px;
+    font-size: 38px;
+    padding: 10px 17px 16px 25px;
+    color: white;
+}
+
+.Timer span a {
+     color: black;
+}
+
+@media only screen and (max-width: 580px) {
+    .Timer .display-timer {
+        font-size: 16vw;
+        margin: 20px 0px;
+    }
+    
+    .Timer .titles, 
+    .Timer .active {
+        font-size: 27px;
+    }
+
+    .Timer input {
+        width: 98px;
+        font-size: 58px;
+        margin: 2px 4px;
+    }
 }
