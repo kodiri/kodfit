@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Login.css';
 import InputBox from './InputBox/InputBox';
 import kodfit_logo from './../../common/images/kodfit_logo_large.svg';
 import GoogleLogin from 'react-google-login';
 
 export default function Login() {
-    const [name, setName] = useState('');
-    const [url, setUrl] = useState('');
 
     const responseGoogle = response => {
-        setName(response.profileObj.name);
-        setUrl(response.profileObj.imageUrl);
+        console.log(response);
     }
-
+    
     return (
         <div className="Login">
             <div className="logoBox">
@@ -42,6 +39,7 @@ export default function Login() {
                           cookiePolicy={'single_host_origin'}
                           isSignedIn={true}
                         />
+
                 </div>
             </main>
         </div>

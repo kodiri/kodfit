@@ -11,7 +11,7 @@ export default function NavBar() {
     {name: 'nearby', path: 'near-me', icon: <MdLocationOn />},
     {name: 'workout', path: 'home', icon: <FaDumbbell />},
     {name: 'progress', path: 'tracker', icon: <MdInsertChart />},
-    {name: 'profile', path: 'workout-current', icon: <MdAccountCircle />},
+    {name: 'profile', path: 'profile', icon: <MdAccountCircle />},
   ]
 
   return (
