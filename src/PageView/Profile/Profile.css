@@ -1,0 +1,72 @@
+.Profile {
+    text-align: center;
+}
+.Profile .container {
+    display: grid;
+}
+
+.Profile .profileBox {
+    background-color: lightgray;
+    padding: 20px;
+    display: grid;
+    place-content: center;
+}
+
+.Profile .profileBox h3 {
+    font-size: 24px;
+}
+
+.Profile .profileBox-photo {
+    width: 160px;
+    height: 160px;
+    background-color: grey;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Profile .personalInfo {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.Profile .personalInfo-content {
+    display: grid;
+    place-content: center;
+}
+
+.Profile .personalInfo-content > * {
+    margin-top: 3px;
+}
+
+.Profile .goal {
+    background-color: lightgray;
+    border-radius: 10px;
+    margin: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.Profile .goal > * {
+    display: grid;
+}
+
+.container-content:last-child {
+    display: grid;
+    place-content: center;
+}
+
+.Profile .durationGraph {
+    background-color: grey;
+    width: 330px;
+    height: 150px;
+}
+
+.Profile .text-bold {
+    font-size: 20px;
+    font-weight: bold;
+}
