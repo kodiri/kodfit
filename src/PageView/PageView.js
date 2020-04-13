@@ -13,13 +13,9 @@ import Timer from './Timer/Timer';
 import OurGoal from '../LandingPage/OurGoal/OurGoal';
 import LandingPage from '../LandingPage/LandingPage';
 import StopWatch from './Timer/StopWatch/StopWatch';
-<<<<<<< HEAD
 import Profile from './Profile/Profile';
 import ProfilePageView from './Profile/ProfilePageView';
 
-=======
-import Navbar from './NavBar/NavBar';
->>>>>>> upstream/master
 
 export default function PageView() {
   return (
