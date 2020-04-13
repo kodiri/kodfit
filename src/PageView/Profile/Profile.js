@@ -4,7 +4,7 @@ import {UserContext} from '../Login/userData';
 
 export default function Profile() {
 
-    const value = useContext(UserContext)
+    const [user, setUser] = useContext(UserContext)
 
     return (
         <div className="Profile">
@@ -14,7 +14,7 @@ export default function Profile() {
                         <div className="profileBox-photo">
                             This will be picture
                         </div>
-                        <h3>{value}, 24</h3>
+                        <h3>{user[0].name}, 24</h3>
                     </div>
                     <div className="personalInfo">
                         <div className="personalInfo-content">

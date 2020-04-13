@@ -1,18 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Login.css';
 import InputBox from './InputBox/InputBox';
 import kodfit_logo from './../../common/images/kodfit_logo_large.svg';
 import GoogleLogin from 'react-google-login';
+// import {UserContext} from './userData';
 
 export default function Login() {
 
     const [name, setName] = useState('');
     const [url, setUrl] = useState('');
+    // const [user, setUser] = useContext(UserContext);
 
     const responseGoogle = response => {
         setName(response.profileObj.name);
         setUrl(response.profileObj.imageUrl);
     }
+
+    // const setUserData = () => {
+    //     setUser({name: name, url: url});
+    // }
     
     return (
         <div className="Login">
