@@ -13,6 +13,7 @@ import Login from './Login/Login';
 import Timer from './Timer/Timer';
 import StopWatch from './Timer/StopWatch/StopWatch';
 import Profile from './Profile/Profile';
+import ProfilePageView from './Profile/ProfilePageView';
 
 
 export default function PageView() {
@@ -29,7 +30,7 @@ export default function PageView() {
       <Route path="/login" exact component={Login} />
       <Route path="/timer" exact component={Timer} />
       <Route path="/stopwatch" exact component={StopWatch} />
-      <Route path="/profile" exact component={Profile} />
+      <Route path="/profile" exact component={ProfilePageView} />
       <NavBar />
     </Router>
   )

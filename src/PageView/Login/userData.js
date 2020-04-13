@@ -1,13 +1,14 @@
 import React, { useState, createContext } from 'react';
+import Profile from '../Profile/Profile';
 
-export const UserContext = createContext(props);
+export const UserContext = createContext();
 
-export function userDataProvider() {
+export function UserDataProvider(props) {
     const [user,setUser] = useState([]);
     
     return (
-        <UserContext.Provider>
-            {props.childeren}
+        <UserContext.Provider value={'hey'}>
+            {props.children}
         </UserContext.Provider>
     );
 }
