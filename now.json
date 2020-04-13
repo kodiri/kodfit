@@ -2,6 +2,11 @@
   "env": {
     "REACT_APP_GOOGLE_API": "@react-app-google-api",
     "REACT_APP_HERE_API": "@react-app-here-api"
-  }
-  
+  },
+  "build": {
+    "env": {
+      "REACT_APP_GOOGLE_API": "@react-app-google-api",
+      "REACT_APP_HERE_API": "@react-app-here-api"
+    }
+  } 
 }
