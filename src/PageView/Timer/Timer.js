@@ -9,12 +9,12 @@ class Timer extends React.Component {
     constructor() {
         super();
         this.state = {
-            time: {},
-            seconds: 0,
+            timerObject: {},
+            toSeconds: 0,
             inputHours: 0,
             inputMinutes: 0,
             inputSeconds: "00",
-            isRunning: false
+            runningTimer: 0
         };
         this.timer = 0;
     }
@@ -22,7 +22,7 @@ class Timer extends React.Component {
     handleTime = (e, timeUnit, modifier) => {
 
         if (e.target.value > 60) {
-            e.target.value = 59;
+            e.target.value = 0;
         }
 
         if (e.target.value < 10) {
@@ -37,38 +37,47 @@ class Timer extends React.Component {
     }
 
     componentDidMount() {
-        let timeLeftVar = this.secondsToTime(this.state.seconds);
-        this.setState({ time: timeLeftVar });
+        let timeLeftVar = this.secondsToTime(this.state.toSeconds);
+        this.setState({ timerObject: timeLeftVar });
     }
 
-    startTimer = (secs) => {
-        if (this.state.isRunning && this.state.seconds > 0) {
+    startTimer = () => {
+        if (this.state.runningTimer === 1 && this.state.toSeconds > 0) {
             this.setState({
-                isRunning: false
+                runningTimer: 2
             });
+
             clearInterval(this.timer);
         } else {
             let total = +this.state.inputHours + +this.state.inputMinutes + +this.state.inputSeconds;
 
-            if (total > 0) {
+            if (total > 0 && this.state.runningTimer === 0) {
                 this.setState({
-                    seconds: total,
-                    isRunning: true
+                    toSeconds: total,
+                    runningTimer: 1
                 });
 
+                this.timer = setInterval(this.countDown, 1000);
+            }
+
+            if (this.state.toSeconds > 0 && this.state.runningTimer == 2) {
+                this.setState({
+                    runningTimer: 1
+                });
                 this.timer = setInterval(this.countDown, 1000);
             }
         }
     }
 
-   
-    countDown = (secs) => {
-        let seconds = this.state.seconds - 1;
+
+    countDown = () => {
+        let countDownSeconds = this.state.toSeconds - 1;
         this.setState({
-            time: this.secondsToTime(seconds),
-            seconds: seconds,
+            timerObject: this.secondsToTime(countDownSeconds),
+            toSeconds: countDownSeconds,
         });
-        if (seconds === 0) {
+
+        if (countDownSeconds === 0) {
             clearInterval(this.timer);
         }
     }
@@ -82,33 +91,29 @@ class Timer extends React.Component {
         let divisorForSeconds = divisorForMinutes % 60;
         let seconds = Math.ceil(divisorForSeconds);
 
-        let zeroAddedMinutes = ('0' + minutes).slice(-2);
-        let zeroAddedSeconds = ('0' + seconds).slice(-2);
-        let zeroAddedHours = ('0' + hours).slice(-2);
-
         let obj = {
-            "h": zeroAddedHours,
-            "m": zeroAddedMinutes,
-            "s": zeroAddedSeconds
+            "h": hours,
+            "m": minutes,
+            "s": seconds
         };
         return obj;
     }
 
     resetTimer = () => {
-        if (this.state.isRunning || this.state.seconds > 0) {
+        if (this.state.isRunning || this.state.toSeconds > 0) {
             this.setState({
-                time: {
+                timerObject: {
                     "h": "00",
                     "m": "00",
                     "s": "00"
                 },
-                isRunning: false
+                toSeconds: 0,
+                runningTimer: 0
             });
             clearInterval(this.timer);
         }
     }
 
-    
     render() {
         return (
             <div className="Timer">
@@ -123,26 +128,32 @@ class Timer extends React.Component {
                     </div>
 
                     <div className="display-timer">
-                        {this.state.time.h}   :  {this.state.time.m}   :  {this.state.time.s}
+                        <span>
+                            {('0' + this.state.timerObject.h).slice(-2)}   :
+                            {('0' + this.state.timerObject.m).slice(-2)}   :
+                            {('0' + this.state.timerObject.s).slice(-2)}
+                        </span>
                     </div>
-                    <div className="input-hours column">
-                        <TimerInput
-                            value={this.state.inputHours < 1 ? "00" : this.state.inputHours / 3600}
-                            field={(e) => this.handleTime(e, 'inputHours', 3600)}
-                        />
-                        <span>Hours</span>
-                    </div>
-                    <div className="input-minutes column">
-                        <TimerInput
-                            value={this.state.inputMinutes < 1 ? "00" : this.state.inputMinutes / 60}
-                            field={(e) => this.handleTime(e, 'inputMinutes', 60)} />
-                        <span>Minutes</span>
-                    </div>
-                    <div className="input-seconds column">
-                        <TimerInput
-                            value={this.state.inputSeconds}
-                            field={(e) => this.handleTime(e, 'inputSeconds', 1)} />
-                        <span>Seconds</span>
+                    <div className="inputs">
+                        <div className="input-hours column">
+                            <TimerInput
+                                value={this.state.inputHours < 1 ? "00" : this.state.inputHours / 3600}
+                                field={(e) => this.handleTime(e, 'inputHours', 3600)}
+                            />
+                            <span>Hours</span>
+                        </div>
+                        <div className="input-minutes column">
+                            <TimerInput
+                                value={this.state.inputMinutes < 1 ? "00" : this.state.inputMinutes / 60}
+                                field={(e) => this.handleTime(e, 'inputMinutes', 60)} />
+                            <span>Minutes</span>
+                        </div>
+                        <div className="input-seconds column">
+                            <TimerInput
+                                value={this.state.inputSeconds}
+                                field={(e) => this.handleTime(e, 'inputSeconds', 1)} />
+                            <span>Seconds</span>
+                        </div>
                     </div>
                     <div className="buttons center">
                         <div className="reset inline">
@@ -156,7 +167,7 @@ class Timer extends React.Component {
                             <button
                                 className="button"
                                 onClick={this.startTimer}>
-                                {this.state.isRunning && this.state.seconds ?
+                                {this.state.runningTimer === 1 && this.state.toSeconds ?
                                     <FaRegStopCircle /> :
                                     <FaPlay />}
                             </button>
