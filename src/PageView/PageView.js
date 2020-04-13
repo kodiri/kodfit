@@ -12,6 +12,7 @@ import Tracker from './Tracker/Tracker';
 import Login from './Login/Login';
 import Timer from './Timer/Timer';
 import StopWatch from './Timer/StopWatch/StopWatch';
+import AboutUs from './AboutUs/AboutUs';
 
 
 export default function PageView() {
@@ -28,6 +29,7 @@ export default function PageView() {
       <Route path="/login" exact component={Login} />
       <Route path="/timer" exact component={Timer} />
       <Route path="/stopwatch" exact component={StopWatch} />
+      <Route path="/about" exact component={StopWatch} />
       <NavBar />
     </Router>
   )
