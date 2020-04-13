@@ -14,27 +14,26 @@ import OurGoal from '../LandingPage/OurGoal/OurGoal';
 import LandingPage from '../LandingPage/LandingPage';
 import StopWatch from './Timer/StopWatch/StopWatch';
 import AboutUs from './AboutUs/AboutUs';
-
 import Navbar from './NavBar/NavBar';
 
 export default function PageView() {
   return (
     <Router>
       <Route path="/" exact component={LandingPage} />
-      <Route path="/calendar" exact component={CalendarApp} />
-      <Route path="/near-me" exact component={NearMe} />
-      <Route path="/near-me-gyms" exact component={NearMeGyms} />
-      <Route path="/near-me-trainers" exact component={NearMeTrainers} />
-      <Route path="/home" exact component={WorkoutsMain} />
-      <Route path="/workout-list" exact component={WorkoutList} />
-      <Route path="/workout-current" exact component={WorkoutCurrent} />
-      <Route path="/tracker" exact component={Tracker} />
       <Route path="/login" exact component={Login} />
-      <Route path="/timer" exact component={Timer} />
+      <Route path="/about" exact component={AboutUs} />
       <Route path="/our-goal" exact component={OurGoal} />
-      <Route path="/stopwatch" exact component={StopWatch} />
-      <Route path="/about" exact component={StopWatch} />
-      <NavBar />
+      <Route path="/dashboard/calendar" exact component={CalendarApp} />
+      <Route path="/dashboard/near-me" exact component={NearMe} />
+      <Route path="/dashboard/near-me-gyms" exact component={NearMeGyms} />
+      <Route path="/dashboard/near-me-trainers" exact component={NearMeTrainers} />
+      <Route path="/dashboard/home" exact component={WorkoutsMain} />
+      <Route path="/dashboard/workout-list" exact component={WorkoutList} />
+      <Route path="/dashboard/workout-current" exact component={WorkoutCurrent} />
+      <Route path="/dashboard/tracker" exact component={Tracker} />
+      <Route path="/dashboard/timer" exact component={Timer} />
+      <Route path="/dashboard/stopwatch" exact component={StopWatch} />
+      <Route path="/dashboard/:slug" exact component={Navbar} />
     </Router>
   );
 }
