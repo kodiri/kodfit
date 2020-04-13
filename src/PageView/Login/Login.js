@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
 import InputBox from './InputBox/InputBox';
 import kodfit_logo from './../../common/images/kodfit_logo_large.svg';
@@ -6,8 +6,12 @@ import GoogleLogin from 'react-google-login';
 
 export default function Login() {
 
+    const [name, setName] = useState('');
+    const [url, setUrl] = useState('');
+
     const responseGoogle = response => {
-        console.log(response);
+        setName(response.profileObj.name);
+        setUrl(response.profileObj.imageUrl);
     }
     
     return (
