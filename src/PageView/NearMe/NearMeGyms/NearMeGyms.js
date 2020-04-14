@@ -25,7 +25,7 @@ export default function NearMeGyms() {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        `https://discover.search.hereapi.com/v1/discover?at=${location.lat},${location.lng}&q=gym&limit=15&apiKey=${process.env.REACT_APP_HERE_API}`
+        `https://discover.search.hereapi.com/v1/discover?at=${location.lat},${location.lng}&q=gym&limit=15&apiKey=bYn1_nn2_CYDA29oVvcibuL4otpQL3F0HIF5aBnlcW4`
       );
       const result = await response.json();
       setData(result.items);
@@ -36,7 +36,7 @@ export default function NearMeGyms() {
     <div className="NearMeGyms">
       <div className="containerOne">
         <div className="map containerOne-content">
-          <LoadScript id="load-script" googleMapsApiKey={process.env.REACT_APP_GOOGLE_API}>
+          <LoadScript id="load-script" googleMapsApiKey='AIzaSyAHs3RiKCGgJhll5xXKjLFqprAi6-LW3Rc'>
             <GoogleMap
               id="gmap"
               zoom={13}
