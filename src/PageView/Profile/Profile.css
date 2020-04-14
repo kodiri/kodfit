@@ -6,9 +6,11 @@
 }
 
 .Profile .profileBox {
-    background-color: lightgray;
+    background-image: url('../../common/images/profile-background-opacity-fixed.jpg');
+    background-size: cover;
     padding: 20px;
     display: grid;
+    height: 35vh;
     place-content: center;
 }
 
@@ -16,14 +18,18 @@
     font-size: 24px;
 }
 
-.Profile .profileBox-photo {
-    width: 160px;
-    height: 160px;
+.Profile .profileBox-photo img {
+    width: 180px;
+    height: 180px;
     background-color: grey;
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.Profile .profileBox-userInfo {
+    margin-top: 10px;
 }
 
 .Profile .personalInfo {
@@ -58,6 +64,7 @@
 .container-content:last-child {
     display: grid;
     place-content: center;
+    margin: 30px 0;
 }
 
 .Profile .durationGraph {
@@ -69,10 +76,4 @@
 .Profile .text-bold {
     font-size: 20px;
     font-weight: bold;
-}
-
-@media (min-width: 600px) {
-    .Profile .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
