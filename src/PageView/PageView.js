@@ -11,9 +11,9 @@ import Timer from './Timer/Timer';
 import OurGoal from '../LandingPage/OurGoal/OurGoal';
 import LandingPage from '../LandingPage/LandingPage';
 import StopWatch from './Timer/StopWatch/StopWatch';
-import ProfilePageView from './Profile/ProfilePageView';
 import AboutUs from './AboutUs/AboutUs';
 import Navbar from './NavBar/NavBar';
+import Elements from './Elements/Elements';
 
 export default function PageView() {
   return (
@@ -32,7 +32,8 @@ export default function PageView() {
       <Route path="/dashboard/timer" exact component={Timer} />
       <Route path="/dashboard/stopwatch" exact component={StopWatch} />
       <Route path="/dashboard/:slug" exact component={Navbar} />
-      <Route path="/dashboard/profile" exact component={ProfilePageView} />
+      <Route path="/dashboard/profile" exact component={Profile} />
+      <Route path="/dashboard/elements" exact component={Elements} />
     </Router>
   );
 }
