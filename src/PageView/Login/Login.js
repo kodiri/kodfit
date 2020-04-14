@@ -6,10 +6,9 @@ import GoogleLogin from 'react-google-login';
 
 export default function Login() {
 
-
     const responseGoogle = response => {
-        localStorage.setItem('name', response.profileObj.name);
-        localStorage.setItem('url', response.profileObj.imageUrl);
+        localStorage.setItem('userName', response.profileObj.name);
+        localStorage.setItem('userImageUrl', response.profileObj.imageUrl);
     }
 
     return (

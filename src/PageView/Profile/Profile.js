@@ -3,9 +3,8 @@ import './Profile.css';
 
 export default function Profile() {
 
-    const name = localStorage.getItem('name');
-    const url = localStorage.getItem('url');
-
+    const userName = localStorage.getItem('userName');
+    const userImageUrl = localStorage.getItem('userImageUrl');
 
     return (
         <div className="Profile">
@@ -13,9 +12,9 @@ export default function Profile() {
                 <div className="container-content">
                     <div className="profileBox">
                         <div className="profileBox-photo">
-                            This will be picture
+                            <img src={userImageUrl} alt={userName} />
                         </div>
-                        <h3>{name}, 24</h3>
+                        <h3>{userName}, 24</h3>
                     </div>
                     <div className="personalInfo">
                         <div className="personalInfo-content">

@@ -11,6 +11,7 @@ import Timer from './Timer/Timer';
 import OurGoal from '../LandingPage/OurGoal/OurGoal';
 import LandingPage from '../LandingPage/LandingPage';
 import StopWatch from './Timer/StopWatch/StopWatch';
+import Profile from './Profile/Profile';
 import AboutUs from './AboutUs/AboutUs';
 import Navbar from './NavBar/NavBar';
 import Elements from './Elements/Elements';
