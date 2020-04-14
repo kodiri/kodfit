@@ -23,7 +23,7 @@ export default function Login() {
                 </div>
                 <div className="loginButtons">
                     <button className="signInButton"> Sign In</button>
-                    <button className="signUpButton"> Sign Up</button>
+                    <p> or </p>
                     <GoogleLogin
                         clientId="848040990578-mpvcvg31e99180qb7f28rqvfm708iqp3.apps.googleusercontent.com"
                         render={renderProps => (
@@ -31,18 +31,15 @@ export default function Login() {
                                 onClick={renderProps.onClick}
                                 disabled={renderProps.disabled}
                                 className="btn-google">
-                                    Google Sign In
+                                    Sign in with Google
                                 </button>
                           )}
-                          buttonText="Login"
+                          buttonText="Sign in with Google"
                           onSuccess={responseGoogle}
                           onFailure={responseGoogle}
                           cookiePolicy={'single_host_origin'}
                           isSignedIn={true}
                         />
-
-                        {/* <UserDataProvider data={{name, url}} /> */}
-
                 </div>
             </main>
         </div>
