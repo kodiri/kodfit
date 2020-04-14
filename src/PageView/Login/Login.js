@@ -3,23 +3,15 @@ import './Login.css';
 import InputBox from './InputBox/InputBox';
 import kodfit_logo from './../../common/images/kodfit_logo_large.svg';
 import GoogleLogin from 'react-google-login';
-// import {UserContext} from './userData';
 
 export default function Login() {
 
-    const [name, setName] = useState('');
-    const [url, setUrl] = useState('');
-    // const [user, setUser] = useContext(UserContext);
 
     const responseGoogle = response => {
-        setName(response.profileObj.name);
-        setUrl(response.profileObj.imageUrl);
+        localStorage.setItem('name', response.profileObj.name);
+        localStorage.setItem('url', response.profileObj.imageUrl);
     }
 
-    // const setUserData = () => {
-    //     setUser({name: name, url: url});
-    // }
-    
     return (
         <div className="Login">
             <div className="logoBox">
@@ -49,6 +41,8 @@ export default function Login() {
                           cookiePolicy={'single_host_origin'}
                           isSignedIn={true}
                         />
+
+                        {/* <UserDataProvider data={{name, url}} /> */}
 
                 </div>
             </main>
