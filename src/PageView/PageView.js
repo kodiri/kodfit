@@ -22,7 +22,7 @@ export default function PageView() {
       <Route path="/login" exact component={Login} />
       <Route path="/about" exact component={AboutUs} />
       <Route path="/our-goal" exact component={OurGoal} />
-      <NavBar />
+      <Navbar />
       <Route path="/dashboard/calendar" exact component={CalendarApp} />
       <Route path="/dashboard/near-me-gyms" exact component={NearMeGyms} />
       <Route path="/dashboard/home" exact component={WorkoutsMain} />
