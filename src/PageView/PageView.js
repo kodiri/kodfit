@@ -4,6 +4,7 @@ import CalendarApp from './CalendarApp/CalendarApp';
 import NearMeGyms from './NearMe/NearMeGyms/NearMeGyms';
 import WorkoutsMain from './WorkoutsMain/WorkoutsMain';
 import WorkoutList from './WorkoutsMain/WorkoutList/WorkoutList';
+import ExerciseListDetails from './WorkoutsMain/WorkoutExerciseList/ExerciseListDetails';
 import WorkoutCurrent from './WorkoutsMain/WorkoutCurrent/WorkoutCurrent';
 import Tracker from './Tracker/Tracker';
 import Login from './Login/Login';
@@ -29,6 +30,7 @@ export default function PageView() {
         <Route path="/dashboard/near-me-gyms" exact component={NearMeGyms} />
         <Route path="/dashboard/home" exact component={WorkoutsMain} />
         <Route path="/dashboard/workout-list" exact component={WorkoutList} />
+        <Route path="/dashboard/workout-list/:listId" exact component={ExerciseListDetails} />
         <Route path="/dashboard/workout-current" exact component={WorkoutCurrent} />
         <Route path="/dashboard/tracker" exact component={Tracker} />
         <Route path="/dashboard/timer" exact component={Timer} />
