@@ -24,20 +24,20 @@ export default function Elements() {
                 <h1 className="separator-right">Left Separator</h1>
             </div>
             <div className="grid">
-                {/* <div>
-                    <a className="" href="#">Simple Link</a>
-                    <a className="button primary" href="#">Primary</a>
-                    <a className="button secondary" href="#">Secondary</a>
-                    <a className="button success" href="#">Success</a>
-                    <a className="button alert" href="#">Alert</a>
+                <div>
+                    <a className="" href="/">Simple Link</a>
+                    <a className="button primary" href="/">Primary</a>
+                    <a className="button secondary" href="/">Secondary</a>
+                    <a className="button success" href="/">Success</a>
+                    <a className="button alert" href="/">Alert</a>
                 </div>
                 <div>
-                    <a className="" href="#">Simple Link</a>
-                    <a className="button primary rounded-capsule" href="#">Primary</a>
-                    <a className="button secondary rounded-capsule" href="#">Secondary</a>
-                    <a className="button success rounded-capsule" href="#">Success</a>
-                    <a className="button alert rounded-capsule" href="#">Alert</a>
-                </div> */}
+                    <a className="" href="/">Simple Link</a>
+                    <a className="button primary rounded-capsule" href="/">Primary</a>
+                    <a className="button secondary rounded-capsule" href="/">Secondary</a>
+                    <a className="button success rounded-capsule" href="/">Success</a>
+                    <a className="button alert rounded-capsule" href="/">Alert</a>
+                </div> 
             </div>
             <div className="grid">
                 <h1>need to fix this </h1>
