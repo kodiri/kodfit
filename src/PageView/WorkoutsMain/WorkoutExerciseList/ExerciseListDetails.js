@@ -43,31 +43,3 @@ export default class ExerciseListDetails extends React.Component {
         )
     }
 }
-
-
-
-// export default function WorkoutList() {
-//     return (
-//         <div className="ExercisesList">
-//             <div className="containerTop">
-//             <a className="button Two" href="./">Exercise List</a>
-//             </div>
-            
-//             <div className="containerBottom"> {
-//                 ExercisesData()
-//                 .filter(exercise => exercise.category === 'Chest')
-//                 .map(exercise => {
-//                     return (
-//                     <ExerciseList
-//                         key={exercise.id}
-//                         exerciseName={exercise.exerciseName}
-//                         reps={exercise.reps}
-//                     />
-//                     );
-//                 })
-//             }  
-//             </div>                    
-//         </div>
-        
-//     )
-// }
