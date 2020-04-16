@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './Profile.css';
 
 export default function Profile() {
@@ -8,7 +8,7 @@ export default function Profile() {
 
     return (
         <div className="Profile">
-            <div className="conatiner">
+            <div className="container">
                 <div className="container-content">
                     <div className="profileBox">
                         <div className="profileBox-photo">
