@@ -24,8 +24,7 @@ export default function CalendarApp() {
     return randomNumbersArray
   };
 
-  let data = getRandomNumbersArray(7)
-  console.log(data)
+  let positions = getRandomNumbersArray(7);
 
   return (
     <div className="calendarAppContainer">
@@ -51,10 +50,10 @@ export default function CalendarApp() {
       <div className="calendarWorkoutContainer">
         <div className="ContainerContent">
           <h3 className="title">Daily Workout</h3>
-          <button className="button primary">Start</button>
+          <button className="button primary rounded-capsule">Start</button>
           <div className="calendarExerciseList"> 
           {
-            Array.isArray(data) && data.map((position, index) => (
+            Array.isArray(positions) && positions.map((position, index) => (
               <ExerciseList
                 key={ExercisesData()[position].exerciseName + index}
                 exerciseName={ExercisesData()[position].exerciseName}
