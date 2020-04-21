@@ -1,20 +1,20 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { ExerciseContext } from '../../../context/ExerciseContext'
+import ExercisesData from '../../../Data/ExercisesData';
 import './WorkoutCurrent.css';
 
 export default function WorkoutCurrent() {
 
-    let exercises = useContext(ExerciseContext);
+    const exercises = useContext(ExerciseContext);
+    const [position, setPosition] = useState(0); 
 
-    let arr = [1,2,3]
-
-    useEffect(() => {
+/*     useEffect(() => {
         arr.forEach(el => (
             setInterval(() => console.log(el), 2000)
         ))
-    }, []);
+    }, []); */
 
-    console.log(exercises.calendarExercisesList)
+    let itemIndex = exercises.calendarExercisesList[position];
 
     return (
         <div className="WorkoutCurrent">
@@ -23,7 +23,9 @@ export default function WorkoutCurrent() {
             </h2>
             <main className="containerOne">
 
-
+            {
+                itemIndex && <div>{ExercisesData()[itemIndex].exerciseName}</div>
+            }
 
 {/*                 <div className="containerOne-content workoutAction">
                     current workout image/video
