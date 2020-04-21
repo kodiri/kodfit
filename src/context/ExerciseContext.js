@@ -1,9 +1,13 @@
 import React, { createContext } from 'react'
+import { getRandomNumbersArray } from '../PageView/CalendarApp/RandomExerciseGen/RandomExerciseGen'
 
-export default function exerciseContext() {
+export const ExerciseContext = createContext();
+
+export default function exerciseContext({children}) {
+
   return (
-    <div>
-      
-    </div>
+    <ExerciseContext.Provider value={{calendarExercisesList: getRandomNumbersArray(7)}}>
+      {children}
+    </ExerciseContext.Provider>
   )
 }

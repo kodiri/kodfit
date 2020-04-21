@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import RandomExerciseGen from './RandomExerciseGen/RandomExerciseGen'
 import './CalendarApp.css';
+import { Link } from 'react-router-dom';
 
 export default function CalendarApp() {
   const [date, setDate] = useState(new Date());
@@ -30,7 +31,9 @@ export default function CalendarApp() {
       <div className="calendarWorkoutContainer">
         <div className="ContainerContent">
           <h3 className="title">Daily Workout</h3>
-          <button className="button primary rounded-capsule">Start</button>
+          <Link to='/dashboard/workout-current'>
+            <button className="button primary rounded-capsule">Start</button>
+          </Link>
           <div className="calendarExerciseList"> 
             <RandomExerciseGen />
           </div>
