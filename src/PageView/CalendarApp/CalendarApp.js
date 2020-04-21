@@ -5,15 +5,11 @@ import './CalendarApp.css';
 
 export default function CalendarApp() {
   const [date, setDate] = useState(new Date());
-
   const onChange = date => setDate(date);
-
-  
 
   return (
     <div className="calendarAppContainer">
-        <h2 className="calendarTitle">Activity Calendar</h2>
-      
+      <h2 className="calendarTitle">Activity Calendar</h2>
       <div className="calendarOne">
         <main className="calendarContent">
           <Calendar
