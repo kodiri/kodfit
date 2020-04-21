@@ -7,7 +7,7 @@ export default function WorkoutList() {
     return (
         <div className="WorkoutsList">
             <div className="containerTop">
-            <a className="button One" href="./home">Workouts</a>
+            <a className="button One" href="../home">Workouts</a>
             <a className="button Two" href="./workout-list">Exercise List</a>
             </div>
             
