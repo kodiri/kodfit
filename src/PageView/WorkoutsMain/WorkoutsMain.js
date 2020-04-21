@@ -7,7 +7,7 @@ export default function WorkoutsMain() {
     return (
         <div className="WorkoutsMain">
             <div className="containerTop">
-            <a className="button One" href="../home">Workouts</a>
+            <a className="button One" href="./home">Workouts</a>
             <a className="button Two" href="./workout-list">Exercise List</a>
             </div>
             
@@ -19,6 +19,7 @@ export default function WorkoutsMain() {
                     key={workout.workoutName}
                     workoutName={workout.workoutName}
                     image={workout.image}
+                    workout={workout.workout}
                   />
                 );
               })

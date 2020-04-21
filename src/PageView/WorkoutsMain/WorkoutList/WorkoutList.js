@@ -2,8 +2,9 @@ import React from 'react';
 import './WorkoutList.css';
 import ExercisesListComponent from './ExercisesListComponent';
 import ExercisesListData from '../../../Data/ExercisesListData';
+import WorkoutListComponent from './WorkoutListComponent';
 
-export default function WorkoutList() {
+export default function WorkoutList(props) {
     return (
         <div className="WorkoutsList">
             <div className="containerTop">
@@ -13,14 +14,20 @@ export default function WorkoutList() {
             
             <div className="containerBottom"> {
                 ExercisesListData().map(list => {
-                    return (
-                    <ExercisesListComponent
-                        key={list.listName}
-                        id={list.id}
-                        listName={list.listName}
-                        image={list.image}
-                    />
-                    );
+                    console.log(props.match.params);
+                    return props.match.params === 'home' ? (
+                        <WorkoutListComponent
+                            key={list.workoutName}
+                            id={list.id}
+                            listName={list.listName}
+                            image={list.image}
+                        />) :
+                        (<ExercisesListComponent
+                            key={list.listName}
+                            id={list.id}
+                            listName={list.listName}
+                            image={list.image}
+                        />);
                 })
             }  
             </div>                    

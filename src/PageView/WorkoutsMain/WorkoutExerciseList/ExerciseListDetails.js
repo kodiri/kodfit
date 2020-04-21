@@ -34,6 +34,7 @@ export default class ExerciseListDetails extends React.Component {
                             id={exercise.id}
                             exerciseName={exercise.exerciseName}
                             reps={exercise.reps}
+                            workout={exercise.workout}
                         />
                         );
                     })

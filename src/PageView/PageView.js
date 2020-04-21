@@ -29,6 +29,7 @@ export default function PageView() {
         <Route path="/dashboard/calendar" exact component={CalendarApp} />
         <Route path="/dashboard/near-me" exact component={NearMe} />
         <Route path="/dashboard/home" exact component={WorkoutsMain} />
+        <Route path="/dashboard/home/:workoutId" exact component={ExerciseListDetails} />
         <Route path="/dashboard/workout-list" exact component={WorkoutList} />
         <Route path="/dashboard/workout-list/:listId" exact component={ExerciseListDetails} />
         <Route path="/dashboard/workout-current" exact component={WorkoutCurrent} />
