@@ -6,13 +6,14 @@ import './WorkoutCurrent.css';
 export default function WorkoutCurrent() {
 
     const exercises = useContext(ExerciseContext);
-    const [position, setPosition] = useState(0); 
+    let [position, setPosition] = useState(0); 
 
-/*     useEffect(() => {
-        arr.forEach(el => (
-            setInterval(() => console.log(el), 2000)
-        ))
-    }, []); */
+    useEffect(() => {
+        if(position <= ExercisesData().length) { 
+            const interval = setInterval(() => setPosition(position++), 2000);
+            return () => clearInterval(interval)
+        }
+    });
 
     let itemIndex = exercises.calendarExercisesList[position];
 
