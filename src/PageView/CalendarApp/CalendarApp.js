@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
-import RandomExerciseGen from './RandomExerciseGen/RandomExerciseGen'
+import RandomExerciseList from './RandomExerciseGen/RandomExerciseList'
 import './CalendarApp.css';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ export default function CalendarApp() {
 
   return (
     <div className="calendarAppContainer">
-      <h2 className="calendarTitle">Activity Calendar</h2>
+      <h2 className="separator-center">Activity Calendar</h2>
       <div className="calendarOne">
         <main className="calendarContent">
           <Calendar
@@ -35,7 +35,7 @@ export default function CalendarApp() {
             <button className="button primary rounded-capsule">Start</button>
           </Link>
           <div className="calendarExerciseList"> 
-            <RandomExerciseGen />
+            <RandomExerciseList />
           </div>
         </div>
       </div> 
