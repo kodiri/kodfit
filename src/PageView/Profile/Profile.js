@@ -14,8 +14,7 @@ export default function Profile() {
                         <div className="profileBox-photo">
                             <img src={userImageUrl} alt={userName} />
                         </div>
-                        <h3 className="profileBox-userInfo">{userName}</h3>
-                    </div>
+                        <h2 className="profileBox-userInfo">{userName}</h2>
                     <div className="personalInfo">
                         <div className="personalInfo-content">
                             <span className>weight</span>
@@ -33,6 +32,7 @@ export default function Profile() {
                             <span>sex</span>
                             <span className="text-bold">F</span>
                         </div>
+                    </div>
                     </div>
                     <div className="goal">
                         <h4>GOAL</h4>

@@ -9,7 +9,7 @@
     background-image: url('../../common/images/profile-background-opacity-fixed.jpg');
     background-size: cover;
     display: grid;
-    height: 35vh;
+    height: 45vh;
     place-content: center;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .Profile .goal {
-    background-color: #00aaef;
+    border: .1rem solid #00aaef;
     border-radius: 2rem;
     margin: 0 10px;
     padding: 10px 0;
@@ -77,8 +77,8 @@
 }
 
 @media (min-width: 600px) {
-    .Profile .container {
-        grid-template-columns: repeat(2, 1fr);
+    .Profile .profileBox {
+        height: 45vh;
     }
 }
 
