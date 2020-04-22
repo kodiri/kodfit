@@ -46,22 +46,11 @@
 }
 
 .Login .signInButton {
-    font-size: 16px;
-    padding: 10px;
-    background-color: #00aaef;
-    border-radius: 3rem;
-    color: #ffffff;
-    font-weight: bold;
+    color: #fff;
     margin-top: 10px;
     font-family: 'Play', sans-serif;
 }
 
 .Login .btn-google {
-    border-radius: 3rem;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color:#00aaef;
-    border: 1px solid #00aaef;
-    font-family: 'Play', sans-serif;
+    color: #00AAEF;
 }
