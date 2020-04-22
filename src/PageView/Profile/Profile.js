@@ -14,11 +14,11 @@ export default function Profile() {
                         <div className="profileBox-photo">
                             <img src={userImageUrl} alt={userName} />
                         </div>
-                        <h3 className="profileBox-userInfo">{userName}, 24</h3>
+                        <h3 className="profileBox-userInfo">{userName}</h3>
                     </div>
                     <div className="personalInfo">
                         <div className="personalInfo-content">
-                            <span>weight</span>
+                            <span className>weight</span>
                             <span className="text-bold">50kg</span>
                         </div>
                         <div className="personalInfo-content">
@@ -35,7 +35,7 @@ export default function Profile() {
                         </div>
                     </div>
                     <div className="goal">
-                        <h4>Goal</h4>
+                        <h4>GOAL</h4>
                         <div className="goal-weight">
                             <span>weight</span>
                             <span>48 kg</span>
@@ -44,8 +44,8 @@ export default function Profile() {
                             <span>bmi</span>
                             <span>18.7</span>
                         </div>
-
                     </div>
+                    <div className="separator-center"></div>
                 </div>
                 <div className="container-content">
                     <h3>Daily Workout Duration</h3>
