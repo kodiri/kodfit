@@ -39,16 +39,14 @@
 
 .Login .LoginButtons > * {
     text-transform: uppercase;
-}
-
-.Login .LoginButtons p {
-    margin: 0 auto;
+    text-align: center;
+    font-family: 'Play', sans-serif;
 }
 
 .Login .signInButton {
     color: #fff;
-    margin-top: 10px;
-    font-family: 'Play', sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
 }
 
 .Login .btn-google {

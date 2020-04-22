@@ -12,15 +12,15 @@ export default function LoginButtons(props) {
 
     return (
         <div className="LoginButtons">
-            <button className="signInButton"> Sign In</button>
-            <p> or </p>
+            <button className="button primary rounded-capsule signInButton">Sign In</button>
+            <span>or</span>
             <GoogleLogin
                 clientId="848040990578-mpvcvg31e99180qb7f28rqvfm708iqp3.apps.googleusercontent.com"
                 render={renderProps => (
                     <button
                         onClick={renderProps.onClick}
                         disabled={renderProps.disabled}
-                        className="btn-google">
+                        className="button btn-transparent rounded-capsule btn-google">
                         Sign in with Google
                     </button>
                 )}
