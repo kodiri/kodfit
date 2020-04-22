@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import CalendarApp from './CalendarApp/CalendarApp';
 import NearMe from './NearMe/NearMe';
-import WorkoutsMain from './WorkoutsMain/WorkoutsMain';
 import WorkoutList from './WorkoutsMain/WorkoutList/WorkoutList';
 import ExerciseListDetails from './WorkoutsMain/WorkoutExerciseList/ExerciseListDetails';
 import WorkoutCurrent from './WorkoutsMain/WorkoutCurrent/WorkoutCurrent';
@@ -28,10 +27,9 @@ export default function PageView() {
         <Route path="/our-goal" exact component={OurGoal} />
         <Route path="/dashboard/calendar" exact component={CalendarApp} />
         <Route path="/dashboard/near-me" exact component={NearMe} />
-        <Route path="/dashboard/home" exact component={WorkoutsMain} />
-        <Route path="/dashboard/home/:workoutId" exact component={ExerciseListDetails} />
-        <Route path="/dashboard/workout-list" exact component={WorkoutList} />
-        <Route path="/dashboard/workout-list/:listId" exact component={ExerciseListDetails} />
+        <Route path="/dashboard/workouts/:view/" exact component={WorkoutList} />
+        <Route path="/dashboard/workouts/home/:listId" exact component={ExerciseListDetails} />
+        <Route path="/dashboard/workouts/workout-list/:listId" exact component={ExerciseListDetails} />
         <Route path="/dashboard/workout-current" exact component={WorkoutCurrent} />
         <Route path="/dashboard/tracker" exact component={Tracker} />
         <Route path="/dashboard/timer" exact component={Timer} />
@@ -39,7 +37,7 @@ export default function PageView() {
         <Route path="/dashboard/profile" exact component={Profile} />
         <Route path="/dashboard/elements" exact component={Elements} />
       </div>
-        <Route path="/dashboard/:slug" exact component={Navbar} />
+        <Route path="/dashboard/:slug" component={Navbar} />
     </Router>
   );
 }

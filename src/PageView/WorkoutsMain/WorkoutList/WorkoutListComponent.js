@@ -6,10 +6,10 @@ import './WorkoutListComponent.css';
 export default class WorkoutListComponent extends React.Component {
 
   render() {
-    let { workout, workoutName, image, workoutAlt } = this.props;
+    let { workoutName, image, workoutAlt } = this.props;
 
     return (
-      <Link to={`/dashboard/home/${workout}`}>
+      <Link to={`/dashboard/workouts/home/${workoutName}`}>
           <div className="routine">
             <p className="text">{workoutName}</p>
             <img src={image} alt={workoutAlt}/>
