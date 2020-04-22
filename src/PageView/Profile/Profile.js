@@ -1,5 +1,6 @@
 import React from 'react';
 import './Profile.css';
+import PersonalInfo from './PersonalInfo/PersonalInfo';
 
 export default function Profile() {
 
@@ -15,25 +16,11 @@ export default function Profile() {
                             <img src={userImageUrl} alt={userName} />
                         </div>
                         <h2 className="profileBox-userInfo">{userName}</h2>
-                    <div className="personalInfo">
-                        <div className="personalInfo-content">
-                            <span className>weight</span>
-                            <span className="text-bold">50kg</span>
-                        </div>
-                        <div className="personalInfo-content">
-                            <span>height</span>
-                            <span className="text-bold">160 cm</span>
-                        </div>
-                        <div className="personalInfo-content">
-                            <span>bmi</span>
-                            <span className="text-bold">19.5</span>
-                        </div>
-                        <div className="personalInfo-content">
-                            <span>sex</span>
-                            <span className="text-bold">F</span>
-                        </div>
+                        <PersonalInfo />
                     </div>
-                    </div>
+                </div>
+                <div className="separator-center" />
+                <div className="container-content">
                     <div className="goal">
                         <h4>GOAL</h4>
                         <div className="goal-weight">
@@ -45,14 +32,13 @@ export default function Profile() {
                             <span>18.7</span>
                         </div>
                     </div>
-                    <div className="separator-center"></div>
                 </div>
-                <div className="container-content">
+                {/* <div className="container-content">
                     <h3>Daily Workout Duration</h3>
                     <div className="durationGraph">
                         Here will be graph
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

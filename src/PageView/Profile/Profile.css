@@ -3,41 +3,39 @@
 }
 .Profile .container {
     display: grid;
+    padding: 0;
 }
 
-.Profile .profileBox {
+.Profile .container-content:first-child {
     background-image: url('../../common/images/profile-background-opacity-fixed.jpg');
     background-size: cover;
+}
+.Profile .profileBox {
     display: grid;
     height: 45vh;
     place-content: center;
-}
-
-.Profile .profileBox h3 {
-    font-size: 24px;
 }
 
 .Profile .profileBox-photo img {
     width: 180px;
     height: 180px;
     border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 2rem;
 }
 
 .Profile .profileBox-userInfo {
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
-.Profile .personalInfo {
-    padding: 20px 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.Profile .PersonalInfo {
+    padding: 1rem 0;
+    display: flex;
 }
 
 .Profile .personalInfo-content {
+    flex-basis: 1;
     display: grid;
+    padding: 0 1rem;
     place-content: center;
 }
 
@@ -61,15 +59,14 @@
 }
 
 .container-content:last-child {
-    display: grid;
-    place-content: center;
+    margin-top: 1rem;
 }
 
-.Profile .durationGraph {
+/* .Profile .durationGraph {
     background-color: grey;
     width: 330px;
     height: 150px;
-}
+} */
 
 .Profile .text-bold {
     font-size: 20px;
@@ -78,7 +75,21 @@
 
 @media (min-width: 600px) {
     .Profile .profileBox {
-        height: 45vh;
+        height: 52vh;
+    }
+
+    .Profile .profileBox-photo img{
+        height: 200px;
+        width: 200px;
+    }
+
+    .Profile .PersonalInfo > * {
+        margin: 0 5.5rem;
+        font-size: 20px;
+    }
+
+    .Profile .text-bold {
+        font-size: 24px;
     }
 }
 
