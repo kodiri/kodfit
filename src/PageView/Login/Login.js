@@ -15,7 +15,7 @@ export default function Login() {
 
     return (
         <div className="Login">
-            {userName && <Redirect to ='/dashboard/home' />}
+            {userName && <Redirect to ='/dashboard/workouts/home' />}
             <div className="logoBox">
                 <img src={kodfit_logo} className="logo" alt="logo" />
             </div>
