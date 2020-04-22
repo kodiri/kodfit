@@ -8,11 +8,9 @@ import WorkoutCurrent from './WorkoutsMain/WorkoutCurrent/WorkoutCurrent';
 import Tracker from './Tracker/Tracker';
 import Login from './Login/Login';
 import Timer from './Timer/Timer';
-import OurGoal from '../LandingPage/OurGoal/OurGoal';
 import LandingPage from '../LandingPage/LandingPage';
 import StopWatch from './Timer/StopWatch/StopWatch';
 import Profile from './Profile/Profile';
-import AboutUs from './AboutUs/AboutUs';
 import Navbar from './NavBar/NavBar';
 import Elements from './Elements/Elements';
 import './PageView.css'
@@ -23,8 +21,6 @@ export default function PageView() {
       <div className="PageView">
         <Route path="/" exact component={LandingPage} />
         <Route path="/login" exact component={Login} />
-        <Route path="/about" exact component={AboutUs} />
-        <Route path="/our-goal" exact component={OurGoal} />
         <Route path="/dashboard/calendar" exact component={CalendarApp} />
         <Route path="/dashboard/near-me" exact component={NearMe} />
         <Route path="/dashboard/workouts/:view/" exact component={WorkoutList} />
