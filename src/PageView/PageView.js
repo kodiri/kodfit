@@ -18,7 +18,7 @@ import './PageView.css'
 export default function PageView() {
   return (
     <Router>
-      <div className="PageView">
+      <div className="PageView container">
         <Route path="/" exact component={LandingPage} />
         <Route path="/login" exact component={Login} />
         <Route path="/dashboard/calendar" exact component={CalendarApp} />

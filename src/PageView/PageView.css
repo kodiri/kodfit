@@ -1,3 +1,8 @@
 .PageView > div {
   margin-bottom: 70px;
 }
+
+.PageView.container {
+  max-width: 100%;
+  padding: 0;
+}

@@ -22,11 +22,11 @@ export default function WorkoutCurrent() {
     let itemIndex = exercises.calendarExercisesList[position];
 
     return (
-        <div className="WorkoutCurrent">
+        <div className="WorkoutCurrent container">
             <h2 className="separator-center">
                 Current Workout
             </h2>
-            <main className="containerOne">
+            <main>
                 <div className="containerOne-content workoutAction">
                     {
                         itemIndex && 

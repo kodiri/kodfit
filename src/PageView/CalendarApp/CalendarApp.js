@@ -28,7 +28,7 @@ export default function CalendarApp() {
         </main>
       </div>
   
-      <div className="calendarWorkoutContainer">
+      <div className="calendarWorkoutContainer container">
         <div className="ContainerContent">
           <h3 className="title">Daily Workout</h3>
           <Link to='/dashboard/workout-current'>
