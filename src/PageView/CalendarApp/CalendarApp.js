@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
-import RandomExerciseList from './RandomExerciseGen/RandomExerciseList'
+import RandomExerciseList from './RandomExerciseGen/RandomExerciseList';
 import './CalendarApp.css';
 import { Link } from 'react-router-dom';
 

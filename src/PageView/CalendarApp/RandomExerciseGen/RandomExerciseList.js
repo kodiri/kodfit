@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import { ExerciseContext } from '../../../context/ExerciseContext'
+import { ExerciseContext } from '../../../context/ExerciseContext';
 import ExercisesData from '../../../Data/ExercisesData';
 import ExerciseList from '../../WorkoutsMain/WorkoutExerciseList/WorkoutExerciseList';
 import '../CalendarApp.css';
 
 export default function RandomExerciseList() {
 
-  let {calendarExercisesList} = useContext(ExerciseContext)
+  let {calendarExercisesList} = useContext(ExerciseContext);
 
   return (
     <>
@@ -20,5 +20,5 @@ export default function RandomExerciseList() {
         ))
       }
     </>
-  )
+  );
 }

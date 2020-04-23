@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ExerciseContext } from '../../../context/ExerciseContext'
 import ExercisesData from '../../../Data/ExercisesData';
-import SmallTimer from '../../Timer/SmallTimer/SmallTimer'
+import SmallTimer from '../../Timer/SmallTimer/SmallTimer';
 import './WorkoutCurrent.css';
 
 export default function WorkoutCurrent() {
@@ -15,7 +15,7 @@ export default function WorkoutCurrent() {
             const interval = setInterval(() => {
                 setPosition(position + 1);
             }, time);
-            return () => clearInterval(interval)
+            return () => clearInterval(interval);
         }
    }, [position]);
 
@@ -27,23 +27,17 @@ export default function WorkoutCurrent() {
                 Current Workout
             </h2>
             <main className="containerOne">
-            <div className="containerOne-content workoutAction">
-                {
-                    itemIndex && 
-                    <>
-                        <h2 className='title'>
-                            {ExercisesData()[itemIndex].exerciseName}
-                        </h2>
-                        <SmallTimer timer={time / 1000}/>
-                    </>
-                }
-            </div >
-                {/* <div className="containerOne-content timer">
-                    <div className="containerTwo">
-                        <button className="timerButton">Break</button>
-                        <button className="timerButton">Finish</button>
-                    </div>
-                </div> */}
+                <div className="containerOne-content workoutAction">
+                    {
+                        itemIndex && 
+                        <>
+                            <h2 className='title'>
+                                {ExercisesData()[itemIndex].exerciseName}
+                            </h2>
+                            <SmallTimer timer={time / 1000}/>
+                        </>
+                    }
+                </div >
             </main>  
         </div>
     )

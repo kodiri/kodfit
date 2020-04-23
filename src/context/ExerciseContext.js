@@ -1,5 +1,5 @@
-import React, { createContext } from 'react'
-import getRandomNumbersArray from '../PageView/CalendarApp/RandomExerciseGen/randIndexGenerator'
+import React, { createContext } from 'react';
+import getRandomNumbersArray from '../PageView/CalendarApp/RandomExerciseGen/randIndexGenerator';
 
 export const ExerciseContext = createContext();
 
