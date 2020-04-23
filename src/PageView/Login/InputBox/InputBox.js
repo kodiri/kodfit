@@ -8,7 +8,7 @@ export default function InputBox({ type, placeholder, onSignIn }) {
             localStorage.setItem('userName', value);
             localStorage.setItem('userImageUrl', defaultUserImage);
             onSignIn(value);
-        }, 3000)
+        }, 3000);
     }
     return (
         <div className="inputBox-content">
