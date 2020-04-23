@@ -33,12 +33,6 @@ export default function Profile() {
                         </div>
                     </div>
                 </div>
-                {/* <div className="container-content">
-                    <h3>Daily Workout Duration</h3>
-                    <div className="durationGraph">
-                        Here will be graph
-                    </div>
-                </div> */}
             </div>
         </div>
     )
