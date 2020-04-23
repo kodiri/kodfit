@@ -46,7 +46,7 @@
 .Profile .Goal {
     border: .1rem solid #00aaef;
     border-radius: 2rem;
-    margin: 0 10px;
+    margin: 0 1rem;
     padding: 10px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -59,14 +59,15 @@
 }
 
 .Profile .container-content:nth-child(2) {
-    margin-top: 1.6rem;
+    margin-top: 2rem;
 }
 
 .Profile .container-content:last-child {
     display: grid;
     place-content: center;
     position: relative;
-    margin: 0 10px;
+    margin: 0 1rem;
+    margin-top: 2rem;
 }
 
 .Profile .text-bold {
