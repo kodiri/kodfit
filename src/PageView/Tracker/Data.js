@@ -78,7 +78,7 @@ const barOption = {
   },
   layout: {
     padding: {
-      top: 70
+      top: 30
     }
   },
 

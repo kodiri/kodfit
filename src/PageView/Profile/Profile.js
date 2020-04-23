@@ -1,6 +1,9 @@
 import React from 'react';
 import './Profile.css';
 import PersonalInfo from './PersonalInfo/PersonalInfo';
+import { Bar } from 'react-chartjs-2'
+import { barOption, data } from '../Tracker/Data';
+import Goal from './Goal/Goal';
 
 export default function Profile() {
 
@@ -19,18 +22,13 @@ export default function Profile() {
                         <PersonalInfo />
                     </div>
                 </div>
-                <div className="separator-center" />
                 <div className="container-content">
-                    <div className="goal">
-                        <h4>GOAL</h4>
-                        <div className="goal-weight">
-                            <span>weight</span>
-                            <span>48 kg</span>
-                        </div>
-                        <div className="goal-weight">
-                            <span>bmi</span>
-                            <span>18.7</span>
-                        </div>
+                    <Goal />
+                </div>
+                <div className="container-content">
+                    <h3>Daily Workout Duration</h3>
+                    <div className="graph">
+                        <Bar data={data} options={barOption} />
                     </div>
                 </div>
             </div>
