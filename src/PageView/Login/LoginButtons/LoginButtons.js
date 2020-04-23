@@ -21,7 +21,7 @@ export default function LoginButtons(props) {
                         onClick={renderProps.onClick}
                         disabled={renderProps.disabled}
                         className="button btn-transparent rounded-capsule btn-google">
-                        Sign in with Google
+                            Sign in with Google
                     </button>
                 )}
                 buttonText="Sign in with Google"
