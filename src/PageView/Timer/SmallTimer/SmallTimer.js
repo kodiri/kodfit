@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './SmallTimer.css';
 
-const SmallTimer = ({ timer, run }) => {
-  const [timeLeft, setTimeLeft] = useState(0)
-  const [isRunning, setRunning] = useState(0)
-  let intervalId = 0
+const SmallTimer = ({ timer, exercises }) => {
+  const [timeLeft, setTimeLeft] = useState(timer)
+  const [position, setPosition] = useState(0)
+  let intervalId = 0;
 
   const secondsToTime = secs => {
     let hours = Math.floor(secs / (60 * 60))
@@ -47,6 +47,7 @@ const SmallTimer = ({ timer, run }) => {
  */
   const theTimer = () => {
     if (timeLeft > -1) {
+     
       if (timeLeft < 60) {
         return `00 : ${('0' + secondsToTime(timeLeft).s).slice(-2)}`
       } else {
@@ -63,9 +64,11 @@ const SmallTimer = ({ timer, run }) => {
     }
   }
 
+
+
   useEffect(() => {
-    if (timeLeft < 0) {
-      setRunning(1)
+    if (timeLeft < 0 &&  position <= exercises.length-1) {
+      setPosition(position + 1)
       setTimeLeft(timer)
       return
     }
@@ -79,7 +82,15 @@ const SmallTimer = ({ timer, run }) => {
 
   return (
     <div className='SmallTimer'>
-      <h2 className='full-display'>{theTimer()}</h2>
+       <h2 className='full-display'>{
+          exercises[position] ?
+          exercises[position].exerciseName : 'Finish Exercise'
+      }</h2>
+      <h2 className='full-display'>{
+         position <= exercises.length-1 ?
+         theTimer() : ''
+      }</h2>
+
 {/*       <button className="resetst-btn" onClick={resetTimer}><MdSettingsBackupRestore /></button>
       <button className="smalltimer-btn" onClick={setTimer}>{isRunning === 1 ? <FaRegStopCircle /> :<FaPlay />}</button> */}
     </div>
