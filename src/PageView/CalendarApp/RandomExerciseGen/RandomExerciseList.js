@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { ExerciseContext } from '../../../context/ExerciseContext';
-import ExercisesData from '../../../Data/ExercisesData';
 import ExerciseList from '../../WorkoutsMain/WorkoutExerciseList/WorkoutExerciseList';
 import '../CalendarApp.css';
 

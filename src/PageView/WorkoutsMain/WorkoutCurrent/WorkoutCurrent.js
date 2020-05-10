@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { ExerciseContext } from '../../../context/ExerciseContext'
-import ExercisesData from '../../../Data/ExercisesData';
 import SmallTimer from '../../Timer/SmallTimer/SmallTimer';
 import './WorkoutCurrent.css';
 
@@ -8,7 +7,6 @@ export default function WorkoutCurrent() {
 
     const exercises = useContext(ExerciseContext);
     let time = 30000;
-    let itemIndex = exercises.calendarExercisesList;
 
     return (
         <div className="WorkoutCurrent container">

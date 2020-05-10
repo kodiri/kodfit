@@ -4,7 +4,6 @@ import './SmallTimer.css';
 const SmallTimer = ({ timer, exercises }) => {
   const [timeLeft, setTimeLeft] = useState(timer)
   const [position, setPosition] = useState(0)
-  let intervalId = 0;
 
   const secondsToTime = secs => {
     let hours = Math.floor(secs / (60 * 60))
@@ -63,8 +62,7 @@ const SmallTimer = ({ timer, exercises }) => {
       }
     }
   }
-
-
+ 
 
   useEffect(() => {
     if (timeLeft < 0 &&  position <= exercises.length-1) {
@@ -72,13 +70,13 @@ const SmallTimer = ({ timer, exercises }) => {
       setTimeLeft(timer)
       return
     }
-
-    intervalId = setInterval(() => {
+    let interval = 0
+    interval = setInterval(() => {
       setTimeLeft(timeLeft - 1)
     }, 1000)
 
-    return () => clearInterval(intervalId)
-  }, [timeLeft])
+    return () => clearInterval(interval)
+  }, [timeLeft,position,exercises.length,timer])
 
   return (
     <div className='SmallTimer'>
