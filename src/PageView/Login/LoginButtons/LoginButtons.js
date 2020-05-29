@@ -3,6 +3,8 @@ import GoogleLogin from 'react-google-login';
 
 export default function LoginButtons(props) {
 
+    const API_KEY = process.env.REACT_APP_GOOGLE_LOGIN;
+
     const responseGoogle = response => {
         localStorage.setItem('userName', response.profileObj.name);
         localStorage.setItem('userImageUrl', response.profileObj.imageUrl);
@@ -15,7 +17,7 @@ export default function LoginButtons(props) {
             <button className="button primary rounded-capsule signInButton">Sign In</button>
             <span>or</span>
             <GoogleLogin
-                clientId="848040990578-mpvcvg31e99180qb7f28rqvfm708iqp3.apps.googleusercontent.com"
+                clientId={`${API_KEY}.apps.googleusercontent.com`}
                 render={renderProps => (
                     <button
                         onClick={renderProps.onClick}

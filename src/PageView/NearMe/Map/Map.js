@@ -5,12 +5,13 @@ import InfoWindows from "./InfoWindows/InfoWindows";
 
 export default function Map({ data, location }) {
     const [markerId, setMarkerId] = useState('');
+    const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
   return (
     <div className="Map">
         <LoadScript
           id="load-script"
-          googleMapsApiKey="AIzaSyAHs3RiKCGgJhll5xXKjLFqprAi6-LW3Rc"
+          googleMapsApiKey={`${API_KEY}`}
         >
           <GoogleMap
             id="gmap"
