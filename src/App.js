@@ -10,8 +10,8 @@ import ExerciseContext from './context/ExerciseContext'
 
 function App() {
 	return (
-			<div className="App">
-				<Logo />
+		<div className="App">
+				<Logo data-testid="logo" />
 				<ExerciseContext>
 					<PageView />
 				</ExerciseContext>
