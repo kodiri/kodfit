@@ -9,7 +9,8 @@ export default function getRandomNumbersArray(el) {
         randomNumbersArray.push(randomNumber + 1) :
         randomNumbersArray.push(randomNumber - 1)
     } else {
-      randomNumbersArray.push(randomNumber)
+     
+      randomNumbersArray.push(ExercisesData()[randomNumber])
     }
   }
   return randomNumbersArray

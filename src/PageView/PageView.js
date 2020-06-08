@@ -5,6 +5,7 @@ import NearMe from './NearMe/NearMe';
 import WorkoutList from './WorkoutsMain/WorkoutList/WorkoutList';
 import ExerciseListDetails from './WorkoutsMain/WorkoutExerciseList/ExerciseListDetails';
 import WorkoutCurrent from './WorkoutsMain/WorkoutCurrent/WorkoutCurrent';
+import ExcerciseListStarts from './WorkoutsMain/WorkoutCurrent/ExcerciseListStarts';
 import Tracker from './Tracker/Tracker';
 import Login from './Login/Login';
 import Timer from './Timer/Timer';
@@ -33,6 +34,7 @@ export default function PageView() {
           <Route path="/dashboard/stopwatch" exact component={StopWatch} />
           <Route path="/dashboard/profile" exact component={Profile} />
           <Route path="/dashboard/elements" exact component={Elements} />
+          <Route path="/dashboard/start-training/:listId" exact component={ExcerciseListStarts} />
         </section>
       </div>
         <Route path="/dashboard/:slug" component={Navbar} />

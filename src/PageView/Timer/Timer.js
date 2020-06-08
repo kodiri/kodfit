@@ -52,7 +52,7 @@ class Timer extends React.Component {
         } else {
             let total = +this.state.inputHours + +this.state.inputMinutes + +this.state.inputSeconds;
             // eslint-disable-next-line 
-            if (total > 0 && this.state.runningTimer === 0 || !this.state.toSeconds) {
+            if (total > 0 && this.state.runningTimer === 0) {
                 this.setState({
                     toSeconds: total,
                     runningTimer: 1
